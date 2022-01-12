@@ -16,6 +16,7 @@
 		2FA2C560276CD39400759DE6 /* AR_ExperimentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2C55F276CD39400759DE6 /* AR_ExperimentsTests.swift */; };
 		2FA2C56A276CD39400759DE6 /* AR_ExperimentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2C569276CD39400759DE6 /* AR_ExperimentsUITests.swift */; };
 		2FA2C56C276CD39400759DE6 /* AR_ExperimentsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2C56B276CD39400759DE6 /* AR_ExperimentsUITestsLaunchTests.swift */; };
+		2FA2C579276D0ECD00759DE6 /* vapourMist.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2FA2C578276D0ECD00759DE6 /* vapourMist.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		2FA2C565276CD39400759DE6 /* AR_ExperimentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AR_ExperimentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA2C569276CD39400759DE6 /* AR_ExperimentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_ExperimentsUITests.swift; sourceTree = "<group>"; };
 		2FA2C56B276CD39400759DE6 /* AR_ExperimentsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_ExperimentsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2FA2C578276D0ECD00759DE6 /* vapourMist.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = vapourMist.usdz; path = ../../dragonUSD/vapourMist.usdz; sourceTree = "<group>"; };
+		6179C24C278F0F97007D49E9 /* AR_Experiments.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AR_Experiments.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +102,11 @@
 		2FA2C547276CD39100759DE6 /* AR_Experiments */ = {
 			isa = PBXGroup;
 			children = (
+				6179C24C278F0F97007D49E9 /* AR_Experiments.entitlements */,
 				2FA2C548276CD39100759DE6 /* AppDelegate.swift */,
 				2FA2C54A276CD39100759DE6 /* SceneDelegate.swift */,
 				2FA2C54C276CD39100759DE6 /* ViewController.swift */,
+				2FA2C578276D0ECD00759DE6 /* vapourMist.usdz */,
 				2FA2C54E276CD39100759DE6 /* Main.storyboard */,
 				2FA2C551276CD39300759DE6 /* Assets.xcassets */,
 				2FA2C553276CD39300759DE6 /* LaunchScreen.storyboard */,
@@ -232,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FA2C555276CD39300759DE6 /* LaunchScreen.storyboard in Resources */,
+				2FA2C579276D0ECD00759DE6 /* vapourMist.usdz in Resources */,
 				2FA2C552276CD39300759DE6 /* Assets.xcassets in Resources */,
 				2FA2C550276CD39100759DE6 /* Main.storyboard in Resources */,
 			);
@@ -367,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -437,16 +443,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AR_Experiments/AR_Experiments.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4NY9EY68HK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AR_Experiments/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "camera use";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationLandscapeLeft;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,6 +462,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sprinkle.AR-Experiments";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -465,16 +474,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AR_Experiments/AR_Experiments.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4NY9EY68HK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AR_Experiments/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "camera use";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationLandscapeLeft;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,6 +493,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sprinkle.AR-Experiments";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
