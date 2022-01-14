@@ -13,12 +13,26 @@ import Combine
 class ViewController: UIViewController {
     var arView:ARView!
     
-    var sceneEventsUpdateSubscription: Cancellable!
+    var eventSubscription: Cancellable!
     var dragon:Entity!
     var i = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        createARView()
+        makeDragon()
+        
+        eventSubscription = arView.scene.subscribe(to: SceneEvents.Update.self) { _ in
+            
+            self.dragon.transform.rotation = simd_quatf(angle: Float(self.deg2rad(self.i)), axis:simd_make_float3(1,0, 0))
+            self.i = self.i + 0.1
+           // print(self.i)
+        }
+
+        
+    }
+    
+    func createARView(){
         arView = ARView(frame: view.frame,
                         cameraMode: .nonAR,
                         automaticallyConfigureSession: false)
@@ -29,16 +43,6 @@ class ViewController: UIViewController {
         let cameraAnchor = AnchorEntity(world: .zero)
         cameraAnchor.addChild(camera)
         arView.scene.addAnchor(cameraAnchor)
-        makeDragon()
-        
-        sceneEventsUpdateSubscription = arView.scene.subscribe(to: SceneEvents.Update.self) { _ in
-            
-            self.dragon.transform.rotation = simd_quatf(angle: Float(self.deg2rad(self.i)), axis:simd_make_float3(1,0, 0))
-            self.i = self.i + 0.1
-            print(self.i)
-        }
-
-        
     }
     
     

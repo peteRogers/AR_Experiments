@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FA0734F2791061100F9FB46 /* vapourMist.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2FA0734E2791061000F9FB46 /* vapourMist.usdz */; };
 		2FA2C549276CD39100759DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2C548276CD39100759DE6 /* AppDelegate.swift */; };
 		2FA2C54B276CD39100759DE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2C54A276CD39100759DE6 /* SceneDelegate.swift */; };
 		2FA2C54D276CD39100759DE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2C54C276CD39100759DE6 /* ViewController.swift */; };
@@ -16,7 +17,6 @@
 		2FA2C560276CD39400759DE6 /* AR_ExperimentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2C55F276CD39400759DE6 /* AR_ExperimentsTests.swift */; };
 		2FA2C56A276CD39400759DE6 /* AR_ExperimentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2C569276CD39400759DE6 /* AR_ExperimentsUITests.swift */; };
 		2FA2C56C276CD39400759DE6 /* AR_ExperimentsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2C56B276CD39400759DE6 /* AR_ExperimentsUITestsLaunchTests.swift */; };
-		2FA2C579276D0ECD00759DE6 /* vapourMist.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2FA2C578276D0ECD00759DE6 /* vapourMist.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2FA0734E2791061000F9FB46 /* vapourMist.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = vapourMist.usdz; path = ../../../Documents/xcodeProjects/AR/dragonUSD/vapourMist.usdz; sourceTree = "<group>"; };
 		2FA2C545276CD39100759DE6 /* AR_Experiments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR_Experiments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA2C548276CD39100759DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FA2C54A276CD39100759DE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		2FA2C565276CD39400759DE6 /* AR_ExperimentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AR_ExperimentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA2C569276CD39400759DE6 /* AR_ExperimentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_ExperimentsUITests.swift; sourceTree = "<group>"; };
 		2FA2C56B276CD39400759DE6 /* AR_ExperimentsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_ExperimentsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2FA2C578276D0ECD00759DE6 /* vapourMist.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = vapourMist.usdz; path = ../../dragonUSD/vapourMist.usdz; sourceTree = "<group>"; };
 		6179C24C278F0F97007D49E9 /* AR_Experiments.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AR_Experiments.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +106,7 @@
 				2FA2C548276CD39100759DE6 /* AppDelegate.swift */,
 				2FA2C54A276CD39100759DE6 /* SceneDelegate.swift */,
 				2FA2C54C276CD39100759DE6 /* ViewController.swift */,
-				2FA2C578276D0ECD00759DE6 /* vapourMist.usdz */,
+				2FA0734E2791061000F9FB46 /* vapourMist.usdz */,
 				2FA2C54E276CD39100759DE6 /* Main.storyboard */,
 				2FA2C551276CD39300759DE6 /* Assets.xcassets */,
 				2FA2C553276CD39300759DE6 /* LaunchScreen.storyboard */,
@@ -237,9 +237,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FA2C555276CD39300759DE6 /* LaunchScreen.storyboard in Resources */,
-				2FA2C579276D0ECD00759DE6 /* vapourMist.usdz in Resources */,
 				2FA2C552276CD39300759DE6 /* Assets.xcassets in Resources */,
 				2FA2C550276CD39100759DE6 /* Main.storyboard in Resources */,
+				2FA0734F2791061100F9FB46 /* vapourMist.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
