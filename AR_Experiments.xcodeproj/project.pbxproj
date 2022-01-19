@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F34CC0A279706AB0079D682 /* komodoWalking.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2F34CC09279706AB0079D682 /* komodoWalking.usdz */; };
+		2F34CC0D27970B660079D682 /* komodSitting.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2F34CC0B27970B650079D682 /* komodSitting.usdz */; };
+		2F34CC0E27970B660079D682 /* komodoLicking.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2F34CC0C27970B650079D682 /* komodoLicking.usdz */; };
 		2FA0734F2791061100F9FB46 /* vapourMist.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2FA0734E2791061000F9FB46 /* vapourMist.usdz */; };
 		2FA2C549276CD39100759DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2C548276CD39100759DE6 /* AppDelegate.swift */; };
 		2FA2C54B276CD39100759DE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2C54A276CD39100759DE6 /* SceneDelegate.swift */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F34CC09279706AB0079D682 /* komodoWalking.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = komodoWalking.usdz; path = ../../../Desktop/komodoWalking.usdz; sourceTree = "<group>"; };
+		2F34CC0B27970B650079D682 /* komodSitting.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = komodSitting.usdz; path = ../../../Desktop/komodSitting.usdz; sourceTree = "<group>"; };
+		2F34CC0C27970B650079D682 /* komodoLicking.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = komodoLicking.usdz; path = ../../../Desktop/komodoLicking.usdz; sourceTree = "<group>"; };
 		2FA0734E2791061000F9FB46 /* vapourMist.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = vapourMist.usdz; path = ../../../Documents/xcodeProjects/AR/dragonUSD/vapourMist.usdz; sourceTree = "<group>"; };
 		2FA2C545276CD39100759DE6 /* AR_Experiments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR_Experiments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA2C548276CD39100759DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,7 +112,10 @@
 				2FA2C548276CD39100759DE6 /* AppDelegate.swift */,
 				2FA2C54A276CD39100759DE6 /* SceneDelegate.swift */,
 				2FA2C54C276CD39100759DE6 /* ViewController.swift */,
+				2F34CC09279706AB0079D682 /* komodoWalking.usdz */,
 				2FA0734E2791061000F9FB46 /* vapourMist.usdz */,
+				2F34CC0C27970B650079D682 /* komodoLicking.usdz */,
+				2F34CC0B27970B650079D682 /* komodSitting.usdz */,
 				2FA2C54E276CD39100759DE6 /* Main.storyboard */,
 				2FA2C551276CD39300759DE6 /* Assets.xcassets */,
 				2FA2C553276CD39300759DE6 /* LaunchScreen.storyboard */,
@@ -236,8 +245,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F34CC0E27970B660079D682 /* komodoLicking.usdz in Resources */,
+				2F34CC0A279706AB0079D682 /* komodoWalking.usdz in Resources */,
 				2FA2C555276CD39300759DE6 /* LaunchScreen.storyboard in Resources */,
 				2FA2C552276CD39300759DE6 /* Assets.xcassets in Resources */,
+				2F34CC0D27970B660079D682 /* komodSitting.usdz in Resources */,
 				2FA2C550276CD39100759DE6 /* Main.storyboard in Resources */,
 				2FA0734F2791061100F9FB46 /* vapourMist.usdz in Resources */,
 			);

@@ -12,85 +12,88 @@ import Combine
 
 class ViewController: UIViewController {
     var arView:ARView!
-    
+    var subscribes: [Cancellable] = []
     var eventSubscription: Cancellable!
     var dragon:Entity!
     var i = 0.0
+    var inc = 0
+    var sitting:AnimationResource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         createARView()
-        makeDragon()
-        
-        eventSubscription = arView.scene.subscribe(to: SceneEvents.Update.self) { _ in
-            
-            self.dragon.transform.rotation = simd_quatf(angle: Float(self.deg2rad(self.i)), axis:simd_make_float3(1,0, 0))
-            self.i = self.i + 0.1
-           // print(self.i)
-        }
-
-        
+        makeKomodo()
     }
     
     func createARView(){
         arView = ARView(frame: view.frame,
                         cameraMode: .nonAR,
                         automaticallyConfigureSession: false)
+       
         view.addSubview(arView)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.onTap(_:)))
+        self.view.addGestureRecognizer(tap)
         let camera = PerspectiveCamera()
         camera.camera.fieldOfViewInDegrees = 60
-        
+        camera.orientation = simd_quatf(angle: Float(self.deg2rad(-28)),
+                                                                 axis: [1,0,0])
+//        eventSubscription = arView.scene.subscribe(to: SceneEvents.Update.self) { _ in
+//            camera.orientation = simd_quatf(angle: Float(self.deg2rad(-28)),
+//                                                          axis: [1,0,0])
+//
+//            self.i = self.i - 0.2
+//           //print(self.i)
+//            if let d = self.dragon{
+//
+//            }
+//        }
+        camera.transform.translation = simd_make_float3(0,
+                                                        0.4,
+                                                        0.4)
         let cameraAnchor = AnchorEntity(world: .zero)
         cameraAnchor.addChild(camera)
         arView.scene.addAnchor(cameraAnchor)
     }
     
+ 
     
-    func makeDragon(){
+    @IBAction func onTap(_ sender: UITapGestureRecognizer){
+       print("tapped")
+        let tapLocation = sender.location(in: arView)
+       
+        if arView.entity(at: tapLocation) != nil{
+                  
+                    if(inc == 0){
+                        inc = 1
+                    dragon.playAnimation(dragon.availableAnimations[0].repeat(), transitionDuration: 2, blendLayerOffset: 0, separateAnimatedValue: false, startsPaused: false)
+                    }else{
+                        inc = 0
+                        dragon.playAnimation(sitting, transitionDuration: 2, blendLayerOffset: 0, separateAnimatedValue: false, startsPaused: false)
+                    }
+                }
+     }
+    
+    
+    func makeKomodo(){
         do{
-        dragon = try Entity.load(named: "vapourMist")
-           // fatalError("not loading")
-        
+            dragon = try Entity.load(named: "komodoWalking")
+            dragon.generateCollisionShapes(recursive: true)
+
         }catch{
             
         }
-        
-       // loadAnimations()
+        sitting = try? Entity.load(named: "komodoLicking").availableAnimations.first!.repeat()
         let dragonAnchor = AnchorEntity(world: .zero)
         arView.scene.addAnchor(dragonAnchor)
-        dragon.transform.scale *= 0.05
+        dragon.transform.scale *= 0.3
         dragonAnchor.addChild(dragon)
-       // dragon.transform.rotation = simd_quatf(angle: Float(deg2rad(180)), axis:simd_make_float3(1,0, 0))
         dragon.transform.translation = simd_make_float3(0,
                                                         0,
                                                         -0.3)
-      //  dragon.transform.rotation = simd_quatf(angle: Float(deg2rad(180)), axis:simd_make_float3(1,0, 0))
-     //   dragon.transform.rotation = simd_quatf(angle: Float(deg2rad(180)), axis:simd_make_float3(0,1, 1//))
-//        subscribes.append(arView.scene.subscribe(to: AnimationEvents.PlaybackCompleted.self, on: dragon){event in
-//            print("looped")
-//            dragon.playAnimation(self.animationList[0], transitionDuration: 1, blendLayerOffset: 0, separateAnimatedValue: false, startsPaused: false)
-//            //komodo.
-//
-//
-//        })
-//
-       // dragon.playAnimation(flyForward, transitionDuration: 1, blendLayerOffset: 0, separateAnimatedValue: false, startsPaused: false)
-//        timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { timer in
-//            if(self.l == true){
-//                dragon.playAnimation(self.flyRight, transitionDuration: 1, blendLayerOffset: 0, separateAnimatedValue:false, startsPaused: false)
-//                self.l = false
-//                print("right")
-//            }else{
-//                dragon.playAnimation(self.flyLeft, transitionDuration: 1, blendLayerOffset: 0, separateAnimatedValue: false, startsPaused: false)
-//                self.l = true
-//                print("left")
-//            }
-            
-        dragon.playAnimation(dragon.availableAnimations[0].repeat(), transitionDuration: 0, blendLayerOffset: 0, separateAnimatedValue:false, startsPaused: false)
-
-//        }
-        
+        dragon.playAnimation(sitting!, transitionDuration: 0, blendLayerOffset: 0, separateAnimatedValue: false, startsPaused: false)
     }
+    
+
     func deg2rad(_ number: Double) -> Double {
         return number * .pi / 180
     }
