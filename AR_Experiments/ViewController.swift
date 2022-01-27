@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         
         eventSubscription = arView.scene.subscribe(to: SceneEvents.Update.self) { _ in
             //*** ADD CODE THAT RUNS EVERY FRAME - SUPER PRECISE
+            
         }
     }
     
