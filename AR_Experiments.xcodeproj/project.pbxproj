@@ -40,9 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F34CC09279706AB0079D682 /* komodoWalking.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = komodoWalking.usdz; path = ../../../Desktop/komodoWalking.usdz; sourceTree = "<group>"; };
-		2F34CC0B27970B650079D682 /* komodSitting.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = komodSitting.usdz; path = ../../../Desktop/komodSitting.usdz; sourceTree = "<group>"; };
-		2F34CC0C27970B650079D682 /* komodoLicking.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = komodoLicking.usdz; path = ../../../Desktop/komodoLicking.usdz; sourceTree = "<group>"; };
+		2F34CC09279706AB0079D682 /* komodoWalking.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = komodoWalking.usdz; path = ../../../Documents/xcodeProjects/AR/komodoUSD/komodoWalking.usdz; sourceTree = "<group>"; };
+		2F34CC0B27970B650079D682 /* komodSitting.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = komodSitting.usdz; path = ../../../Documents/xcodeProjects/AR/komodoUSD/komodSitting.usdz; sourceTree = "<group>"; };
+		2F34CC0C27970B650079D682 /* komodoLicking.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = komodoLicking.usdz; path = ../../../Documents/xcodeProjects/AR/komodoUSD/komodoLicking.usdz; sourceTree = "<group>"; };
 		2FA0734E2791061000F9FB46 /* vapourMist.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = vapourMist.usdz; path = ../../../Documents/xcodeProjects/AR/dragonUSD/vapourMist.usdz; sourceTree = "<group>"; };
 		2FA2C545276CD39100759DE6 /* AR_Experiments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR_Experiments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA2C548276CD39100759DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };

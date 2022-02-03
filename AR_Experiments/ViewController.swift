@@ -82,7 +82,7 @@ class ViewController: UIViewController {
     func makeKomodo(){
         //loads komodo model with the texture surface and creates collision shapes needed for tap testing
         do{
-            dragon = try Entity.load(named: "komodoWalking")
+            dragon = try Entity.load(named: "vapourMist")
             dragon.generateCollisionShapes(recursive: true)
             
         }catch{
